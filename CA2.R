@@ -121,6 +121,12 @@ cor(Target, `Number of major vessels`)                                          
 #negative correlation for Major vessels,Age, Sex
 #very low negative correlation for Cholestrol,Resting blood pressure,Fasting Blood Sugar.
 #so,there is no varaiable is dropped as per the requirement of model
+#-----------------------------------------------------------------------------------------------------------------------------------
+#anova test
+
+ano <- aov(Maximum heart rate achieved ~ Resting blood pressure (in mm Hg) + Cholestrol + Age, data = model_heartdata)
+summary(ano)
+
 #------------------------------------------------------------------------------------------------------------------------------------
 #checking for outliers
 #deleting if there are any
