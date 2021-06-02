@@ -49,7 +49,7 @@ model_heartdata
 #-----------------------------------------------------------------------------------------------------------------------------------
 #Checking correlation of the variables.
 pairs(model_heartdata)
-attach(ht_model_data)
+attach(model_heartdata)
 
 #scatter plot for Age
 scatter.smooth(x = Target, 
@@ -335,8 +335,8 @@ heart_sample
 
 #training and testing data to give the appropriate variables
 
-training_data <- model_heartdata[ht_sample, ]
-testing_data <- model_heartdata[-ht_sample, ]
+training_data <- model_heartdata[heart_sample, ]
+testing_data <- model_heartdata[-heart_sample, ]
 
 
 # Build the model based on training data
@@ -371,7 +371,7 @@ heart_model_2_test <- lm(Target_sqrt ~ Age +Sex + Cholestrol +`Resting blood pre
 stepAIC(heart_model_2_test, direction="backward")
 
 
-#install.packages("leaps")
+install.packages("leaps")
 
 leaps <-regsubsets(Target_sqrt ~ Age + Sex + Cholestrol +`Resting blood pressure (in mm Hg)` +`Fasting blood sugar`+`Number of major vessels`+ 
                      `Maximum heart rate achieved`, data=training_data, nbest=4)
