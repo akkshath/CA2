@@ -30,7 +30,8 @@ class(heart_data)
 
 #----------------------------------------------------------------------------------------------------------------------------------
 #removing all the previously stored variables
-rm(list=ls())  
+#rm(list=ls())
+#if any
 # To check if any NA data present 
 any(is.na(heart_data))
 #clearing out NA values
