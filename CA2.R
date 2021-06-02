@@ -202,20 +202,11 @@ paste("Heart rate (max) Outliers: ",
 #As the outliers are pointed out, the outliers are removed
 
 model_heartdata <- subset(model_heartdata, 
- `Resting blood pressure (in mm Hg)` != 172 &
- `Resting blood pressure (in mm Hg)`!= 178 & 
- `Resting blood pressure (in mm Hg)` != 180 &
- `Resting blood pressure (in mm Hg)` != 200 & 
- `Resting blood pressure (in mm Hg)`!= 174 & 
- `Resting blood pressure (in mm Hg)` != 192)
-
+ `Resting blood pressure (in mm Hg)` != 172 &`Resting blood pressure (in mm Hg)`!= 178 & `Resting blood pressure (in mm Hg)` != 180 &
+ `Resting blood pressure (in mm Hg)` != 200 & `Resting blood pressure (in mm Hg)`!= 174 & `Resting blood pressure (in mm Hg)` != 192)
 
 model_heartdata<- subset(model_heartdata, 
- Cholestrol != 417 &
- Cholestrol != 564 & 
- Cholestrol != 394 & 
- Cholestrol != 407 & 
- Cholestrol != 409)
+ Cholestrol != 417 & Cholestrol != 564 & Cholestrol != 394 & Cholestrol != 407 & Cholestrol != 409)
 
 model_heartdata<- subset(model_heartdata, 
                        Max_heartrate != 71)
@@ -320,7 +311,7 @@ detach(model_heartdata)
 attach(model_heartdata)  
 
 heart_mlr<- lm(Target ~ Age +Sex + Cholestrol +`Resting blood pressure (in mm Hg)` +`Fasting blood sugar`+`Number of major vessels`+ 
-            `Maximum heart rate achieved`, data = ht_model_data)
+            `Maximum heart rate achieved`, data = heart_model_data)
 
 summary(heart_mlr)
 #sex, Number of major vessels, Maximum Heart rate, Cholestrol has very
