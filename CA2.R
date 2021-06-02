@@ -395,8 +395,6 @@ correlation_accuracy
 sigma(heart_model_2_test)/ mean(testing_data$Target)
 #0.717 is the sigma value 
 
-
-#---------------------------------------------------------------------------------------------------------------------------------
 #coorelation accurracy of the two models is 58, RSE(sigma) is low for second model 
 #heart_model_2,so that is th best model.
 #---------------------------------------------------------------------------------------------------------------------------------
@@ -413,5 +411,4 @@ heart_model_data_OP<- data.frame(Age = c(41),Sex = c(0),  `Resting blood pressur
 predicted_heart_attack <- predict(heart_model_2, heart_model_data_OP)
 predicted_heart_attack
 
-#the person has 81% chance of getting a heart attack 
-.
+#the person has 81% chance of getting a heart attack
