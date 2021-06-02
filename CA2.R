@@ -286,19 +286,19 @@ polygon(density(`Number of major vessels`), col = "blue")
 
 #results
 
-paste("Skewness of Age: ", round(e1071::skewness(Age), 2))                                         # Skewness of Age:  -0.15
+paste("Skewness of Age: ", round(e1071::skewness(Age), 2))                                         # Skewness of Age:                    -0.15
 
-paste("Skewness of Sex: ", round(e1071::skewness(Sex), 2))                                         # "Skewness of Sex:  -0.88"
+paste("Skewness of Sex: ", round(e1071::skewness(Sex), 2))                                         # Skewness of Sex:                    -0.88
 
-paste("Skewness of BP: ", round(e1071::skewness(`Resting blood pressure (in mm Hg)`), 2))          # "Skewness of BP:  0.25"
+paste("Skewness of BP: ", round(e1071::skewness(`Resting blood pressure (in mm Hg)`), 2))          # Skewness of BP:                      0.25
 
-paste("Skewness of Cholestrol ", round(e1071::skewness(Cholestrol, 2)))                            # "Skewness of Cholestrol:  0"
+paste("Skewness of Cholestrol ", round(e1071::skewness(Cholestrol, 2)))                            # Skewness of Cholestrol:              0
 
-paste("Skewness of Blood sugar ", round(e1071::skewness(`Fasting blood sugar`, 2)))                # "Skewness of Blood sugar:  2 "
+paste("Skewness of Blood sugar ", round(e1071::skewness(`Fasting blood sugar`, 2)))                # Skewness of Blood sugar:             2 
 
-paste("Skewness of Heart Rate (max) ", round(e1071::skewness(`Maximum heart rate achieved`, 2)))   # "Skewness of Heart Rate (max):  -1"
+paste("Skewness of Heart Rate (max) ", round(e1071::skewness(`Maximum heart rate achieved`, 2)))   # Skewness of Heart Rate (max):       -1
 
-paste("Skewness of Major vessels (Count) ", round(e1071::skewness(`Number of major vessels`, 2)))  # "Skewness of Major vessels (Count):  1"
+paste("Skewness of Major vessels (Count) ", round(e1071::skewness(`Number of major vessels`, 2)))  # Skewness of Major vessels (Count):   1
 
 
 #blood sugar is highly skewed
@@ -328,7 +328,7 @@ confint(heart_mlr)
 # spliting for the training and testing data 
 set.seed(1)
 rows_split <- nrow(model_heartdata)
-heart_sample <- sample(1: rows_split, size = round(0.7 * rows_split), 
+heart_sample <- sample(1: rows_split, size = round(0.65 * rows_split), 
                     replace = FALSE)
 
 heart_sample
